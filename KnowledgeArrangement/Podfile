@@ -1,0 +1,33 @@
+# Uncomment the next line to define a global platform for your project
+source 'https://github.com/CocoaPods/Specs.git' #官方库
+platform :ios, '13.5'
+
+target 'KnowledgeArrangement' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for KnowledgeArrangement
+pod 'SDWebImage', '~> 5.14.2'
+pod 'MJRefresh', '~> 3.1.15.7'
+pod 'SVProgressHUD', '~> 2.2.5'
+pod 'IQKeyboardManagerSwift', '~> 6.5.10'
+pod 'BlocksKit', '~> 2.2.5'
+pod 'SnapKit', '~> 4.2.0'
+pod 'SHFullscreenPopGestureSwift', '~> 1.2.1'
+pod 'RxSwift'
+pod 'RxCocoa'
+pod 'RxDataSources'
+pod 'HandyJSON', '~> 5.0.0-beta.1'#转换 json与模型
+pod 'Alamofire', '~> 5.0.0-beta.6' #网络请求
+pod 'PGNumberKeyboard', '~> 1.0.3'
+pod 'FMDB', '~> 2.7.5'
+pod 'WMPlayer', '~> 5.0.0'
+pod 'ORCharts', '~> 2.1.8' #统计图
+pod 'SQLite.swift', '~> 0.14.1'
+pod 'RealmSwift','10.7.6'
+pod 'swift-numerics', '~> 1.0.2'
+#pod 'Kingfisher', '~> 7.5.0'
+#pod 'Kingfisher','5.15.8'
+pod 'Kingfisher', '~> 7.10.1'
+pod 'Realm'
+end
