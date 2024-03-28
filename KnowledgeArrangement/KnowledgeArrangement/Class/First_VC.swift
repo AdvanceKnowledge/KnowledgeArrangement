@@ -22,7 +22,8 @@ class First_VC: BaseVC {
                        "VideoPlaybackViewController",
                        "WYLChartVC",
                        "WYLDealImage",
-                       "WYLDataPersistenceVC"
+                       "WYLDataPersistenceVC",
+//                       "WYLWeatherVC"
     ]
     let vc_title = ["RunLoop",
                     "button响应区域",
@@ -35,7 +36,8 @@ class First_VC: BaseVC {
                     "视频播放",
                     "统计图",
                     "图片添加圆角/圆形",
-                    "数据持久化"
+                    "数据持久化",
+//                    "苹果天气"
     ]
     
     override func viewDidLoad() {

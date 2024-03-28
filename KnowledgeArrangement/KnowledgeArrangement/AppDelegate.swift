@@ -9,6 +9,7 @@
 import UIKit
 import IQKeyboardManagerSwift
 import RealmSwift
+import SHFullscreenPopGestureSwift
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -35,6 +36,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             make.height.equalTo(30)
         }
         configRealm()
+        configBugly()
+        // 启用
+//        SHFullscreenPopGesture.configure()
         return true
     }
     
@@ -48,6 +52,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
         }, deleteRealmIfMigrationNeeded: true)
         Realm.Configuration.defaultConfiguration = config
+    }
+    
+    func configBugly() {
+//        Bugly.start(withAppId: "514ed79021")
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

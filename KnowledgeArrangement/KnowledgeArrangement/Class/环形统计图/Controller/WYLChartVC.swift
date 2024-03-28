@@ -12,7 +12,7 @@ import ORCharts
 class WYLChartVC: ParentsVC {
     
     let orRingChartView = ORRingChartView()
-    
+    let orLineChartView = ORLineChartView()
     let values = [12.1,13.4,14]
     let ringColors: [[UIColor]] = [[.red],[.blue],[.cyan]]
     
@@ -43,6 +43,15 @@ class WYLChartVC: ParentsVC {
             make.center.equalToSuperview()
             make.height.width.equalTo(self.view.snp.width)
         }
+        
+//        configureLineChartView()
+//        self.view.addSubview(orLineChartView)
+//        orLineChartView.snp.makeConstraints { make in
+//            make.centerX.equalToSuperview()
+////            make.top.equalTo(orRingChartView.snp.bottom).offset(30)
+//            make.top.equalToSuperview().inset(30)
+//            make.height.width.equalTo(self.view.snp.width)
+//        }
     }
     
     @objc func chanValue(seg: UISegmentedControl) {
@@ -56,6 +65,13 @@ class WYLChartVC: ParentsVC {
         orRingChartView.config.startAngle = 0
         orRingChartView.config.ringLineWidth = 20
         orRingChartView.dataSource = self
+    }
+    
+    
+    func configureLineChartView() {
+        orLineChartView.dataSource = self
+        orLineChartView.delegate = self
+        
     }
     
 }
@@ -111,5 +127,17 @@ extension WYLChartVC:ORRingChartViewDatasource {
         return view
         
     }
+    
+}
+
+extension WYLChartVC: ORLineChartViewDelegate,ORLineChartViewDataSource {
+    func numberOfHorizontalData(of chartView: ORLineChartView) -> Int {
+        return values.count
+    }
+    
+    func chartView(_ chartView: ORLineChartView, valueForHorizontalAt index: Int) -> CGFloat {
+        return values[index]
+    }
+    
     
 }

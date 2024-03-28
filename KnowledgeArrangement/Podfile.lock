@@ -85,7 +85,7 @@ DEPENDENCIES:
   - RxDataSources
   - RxSwift
   - SDWebImage (~> 5.14.2)
-  - SHFullscreenPopGestureSwift (~> 1.2.1)
+  - SHFullscreenPopGestureSwift
   - SnapKit (~> 4.2.0)
   - SQLite.swift (~> 0.14.1)
   - SVProgressHUD (~> 2.2.5)
@@ -152,6 +152,6 @@ SPEC CHECKSUMS:
   swift-numerics-shims: 27661847e9d3a52ad620cc255da19333bdfe155c
   WMPlayer: a914f80ed5dca7cd9e3a94ec07a2b02eec8c15c0
 
-PODFILE CHECKSUM: 9079954b4e06da63c04b8bab228ff0303819f694
+PODFILE CHECKSUM: 4ab7c26347f8d7d455cb0cee174e327c455366f0
 
 COCOAPODS: 1.12.1

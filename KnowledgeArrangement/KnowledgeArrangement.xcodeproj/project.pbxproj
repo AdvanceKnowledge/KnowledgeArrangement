@@ -104,6 +104,7 @@
 		BEC4D95D2890C48E0078B675 /* WYLKeyBoardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC4D95B2890C48E0078B675 /* WYLKeyBoardVC.swift */; };
 		BEC4D95E2890C48E0078B675 /* WYLKeyBoardVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEC4D95C2890C48E0078B675 /* WYLKeyBoardVC.xib */; };
 		BEC4D97C2890DAB40078B675 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC4D97B2890DAB40078B675 /* UIColor+Extension.swift */; };
+		BEC8E6F32BB171C50086049A /* WYLWeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC8E6F22BB171C50086049A /* WYLWeatherVC.swift */; };
 		BEDA8F362970E35F00878F61 /* MyVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEDA8F342970E35F00878F61 /* MyVideoCell.swift */; };
 		BEDA8F372970E35F00878F61 /* MyVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BEDA8F352970E35F00878F61 /* MyVideoCell.xib */; };
 		BEE34BE52B9ED05D002FACBA /* GetClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE34BE42B9ED05D002FACBA /* GetClassName.swift */; };
@@ -248,6 +249,7 @@
 		BEC4D95C2890C48E0078B675 /* WYLKeyBoardVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WYLKeyBoardVC.xib; sourceTree = "<group>"; };
 		BEC4D97B2890DAB40078B675 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		BEC4D9822890EC040078B675 /* Extension.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Extension.md; sourceTree = "<group>"; };
+		BEC8E6F22BB171C50086049A /* WYLWeatherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYLWeatherVC.swift; sourceTree = "<group>"; };
 		BEDA8F342970E35F00878F61 /* MyVideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyVideoCell.swift; sourceTree = "<group>"; };
 		BEDA8F352970E35F00878F61 /* MyVideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyVideoCell.xib; sourceTree = "<group>"; };
 		BEE34BE42B9ED05D002FACBA /* GetClassName.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetClassName.swift; sourceTree = "<group>"; };
@@ -413,6 +415,7 @@
 		BE7E932B222F64330030A3B5 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				BEC8E6F12BB1719A0086049A /* WeatherKit */,
 				BE76D95F2BA02A0900452EB2 /* 模式类型示例 */,
 				BE900980296FED030076B3D2 /* 数据持久化 */,
 				BE1B172C296BFD9E00938255 /* 图片处理 */,
@@ -952,6 +955,14 @@
 			path = DOC;
 			sourceTree = "<group>";
 		};
+		BEC8E6F12BB1719A0086049A /* WeatherKit */ = {
+			isa = PBXGroup;
+			children = (
+				BEC8E6F22BB171C50086049A /* WYLWeatherVC.swift */,
+			);
+			path = WeatherKit;
+			sourceTree = "<group>";
+		};
 		BEE54E9C225B1F18003EA367 /* HandyJSON */ = {
 			isa = PBXGroup;
 			children = (
@@ -1095,6 +1106,7 @@
 				BE7E933B222FA4B70030A3B5 /* ResponseArea_VC.swift in Sources */,
 				BE66C42F289385E200594C43 /* VideoPlaybackViewController.swift in Sources */,
 				BEBE790D2948529600A163C8 /* XXBRippleView.m in Sources */,
+				BEC8E6F32BB171C50086049A /* WYLWeatherVC.swift in Sources */,
 				BE66C441289387A200594C43 /* AGBaseCell.swift in Sources */,
 				BEBE790C2948529600A163C8 /* YFAnimationManager.m in Sources */,
 				BE7E92FC222F62590030A3B5 /* ViewController.swift in Sources */,
@@ -1335,9 +1347,12 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Personal.KnowledgeArrangement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ENABLE_BATCH_MODE = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "KnowledgeArrangement/BasicFile/Tools/CollaborativeOffice-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1357,9 +1372,12 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.Personal.KnowledgeArrangement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ENABLE_BATCH_MODE = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "KnowledgeArrangement/BasicFile/Tools/CollaborativeOffice-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
