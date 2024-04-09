@@ -11,6 +11,8 @@
 		BE03B13F2237804100A0CEC9 /* ColorToImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE03B13E2237804100A0CEC9 /* ColorToImage.swift */; };
 		BE1B172B296BF00E00938255 /* ImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1B172A296BF00E00938255 /* ImageExtension.swift */; };
 		BE1B172E296BFDDE00938255 /* WYLDealImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1B172D296BFDDE00938255 /* WYLDealImage.swift */; };
+		BE47F7B12BB50626001121C2 /* WYLURLIgVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47F7B02BB50626001121C2 /* WYLURLIgVC.swift */; };
+		BE47F7B42BB54114001121C2 /* WYLLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE47F7B32BB54114001121C2 /* WYLLoadingView.swift */; };
 		BE52A872288A91B6000C4F37 /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE52A871288A91B6000C4F37 /* NSDateExtension.swift */; };
 		BE52A874288A920E000C4F37 /* EnlargeEdge.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE52A873288A920E000C4F37 /* EnlargeEdge.swift */; };
 		BE52A877288A9252000C4F37 /* WYLThreadLockVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE52A876288A9252000C4F37 /* WYLThreadLockVC.swift */; };
@@ -119,6 +121,8 @@
 		BE16DA1C2231260A000AC7FE /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		BE1B172A296BF00E00938255 /* ImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtension.swift; sourceTree = "<group>"; };
 		BE1B172D296BFDDE00938255 /* WYLDealImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYLDealImage.swift; sourceTree = "<group>"; };
+		BE47F7B02BB50626001121C2 /* WYLURLIgVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYLURLIgVC.swift; sourceTree = "<group>"; };
+		BE47F7B32BB54114001121C2 /* WYLLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYLLoadingView.swift; sourceTree = "<group>"; };
 		BE52A871288A91B6000C4F37 /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
 		BE52A873288A920E000C4F37 /* EnlargeEdge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnlargeEdge.swift; sourceTree = "<group>"; };
 		BE52A876288A9252000C4F37 /* WYLThreadLockVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYLThreadLockVC.swift; sourceTree = "<group>"; };
@@ -291,8 +295,17 @@
 			isa = PBXGroup;
 			children = (
 				BE1B172D296BFDDE00938255 /* WYLDealImage.swift */,
+				BE47F7B02BB50626001121C2 /* WYLURLIgVC.swift */,
 			);
 			path = "图片处理";
+			sourceTree = "<group>";
+		};
+		BE47F7B22BB540E0001121C2 /* 加载框 */ = {
+			isa = PBXGroup;
+			children = (
+				BE47F7B32BB54114001121C2 /* WYLLoadingView.swift */,
+			);
+			path = "加载框";
 			sourceTree = "<group>";
 		};
 		BE52A870288A91A5000C4F37 /* Extension */ = {
@@ -612,6 +625,7 @@
 		BEB4C90322DC176F0081896C /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				BE47F7B22BB540E0001121C2 /* 加载框 */,
 				BE7AD4BA2BABBD140022342B /* CertificationStatus */,
 				BEA4B3932977B94A00D00E79 /* Protocol */,
 				BE90097D296FECAB0076B3D2 /* Realm */,
@@ -1148,6 +1162,7 @@
 				BE52A872288A91B6000C4F37 /* NSDateExtension.swift in Sources */,
 				BEC4D95D2890C48E0078B675 /* WYLKeyBoardVC.swift in Sources */,
 				BEBE794A294853A700A163C8 /* UIScrollView+EmptyDataSet.m in Sources */,
+				BE47F7B12BB50626001121C2 /* WYLURLIgVC.swift in Sources */,
 				BEBE79062948529600A163C8 /* YFEmitterLeavesCell.m in Sources */,
 				BE9E3132288F750E00813AAE /* APIManager.swift in Sources */,
 				BEB4C92222DC17700081896C /* ExtensionTools.swift in Sources */,
@@ -1189,6 +1204,7 @@
 				BEB4C92522DC17700081896C /* UITextView+Placeholder.m in Sources */,
 				BE52A874288A920E000C4F37 /* EnlargeEdge.swift in Sources */,
 				BEC4D97C2890DAB40078B675 /* UIColor+Extension.swift in Sources */,
+				BE47F7B42BB54114001121C2 /* WYLLoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

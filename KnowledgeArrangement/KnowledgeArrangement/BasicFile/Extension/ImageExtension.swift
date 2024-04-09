@@ -167,20 +167,46 @@ extension UIImage {
         var clockwise = true
         switch direction {
         case .LEFT:
-            startAngle = 0.5 * Double.pi
-            endAngle = Double.pi * 1.5
-        case .RIGHT:
             arcCenter = CGPoint(x: 0, y: side / 2.0)
-            startAngle = Double.pi * 1.5
-            endAngle = 0.5 * Double.pi
-        case .TOP:
             startAngle = Double.pi
-            endAngle = 0
-        case .BOTTOM:
+            endAngle = Double.pi * 0.5
+        case .RIGHT:
+            arcCenter = CGPoint(x: side, y: side / 2.0)
+            startAngle = Double.pi/6.0
+            endAngle = 0.5 * Double.pi
+            clockwise = false
+        case .TOP:
             arcCenter = CGPoint(x: side / 2.0, y: 0)
-            startAngle = 0
+            startAngle = Double.pi * 1.5
             endAngle = Double.pi
+        case .BOTTOM:
+            arcCenter = CGPoint(x: side / 2.0, y: side)
+            startAngle = Double.pi * 0.5
+            endAngle = 0
         }
+        
+        
+//        switch direction {
+//        case .LEFT:
+//            arcCenter = CGPoint(x: 0, y: side)
+//            startAngle = Double.pi * 0.5
+//            endAngle = Double.pi * 11.0 / 6.0
+//            clockwise = false
+//        case .RIGHT:
+//            arcCenter = CGPoint(x: side, y: side / 2.0)
+//            startAngle = Double.pi/6.0
+//            endAngle = 0.5 * Double.pi
+//            clockwise = false
+//        case .TOP:
+//            arcCenter = CGPoint(x: side / 2.0, y: 0)
+//            startAngle = Double.pi * 1.5
+//            endAngle = Double.pi
+//        case .BOTTOM:
+//            arcCenter = CGPoint(x: side / 2.0, y: side)
+//            startAngle = Double.pi * 0.5
+//            endAngle = 0
+//        }
+        
         return deal(path: UIBezierPath(arcCenter: arcCenter,
                                        radius: radius,
                                        startAngle: startAngle,
@@ -203,7 +229,8 @@ extension UIImage {
                                                false,
                                                UIScreen.main.scale)
         UIGraphicsGetCurrentContext()?.addPath(path.cgPath)
-        UIGraphicsGetCurrentContext()?.clip()
+//        UIGraphicsGetCurrentContext()?.clip()
+        UIGraphicsGetCurrentContext()?.clip(using: .evenOdd)
         let X = -(size.width - path.bounds.width) / 3.0
         let Y = -(size.height - path.bounds.height) / 2.0
         draw(in: CGRect(x: X, y: Y, width: size.width, height: size.height))
@@ -216,3 +243,6 @@ extension UIImage {
         
     }
 }
+
+
+

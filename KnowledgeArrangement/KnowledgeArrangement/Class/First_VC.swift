@@ -55,6 +55,8 @@ class First_VC: BaseVC {
         list_tab.dataSource = self
         list_tab.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         sorted()
+        
+        shareLoading.startProgressAnimating()
     }
 }
 

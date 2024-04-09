@@ -46,7 +46,9 @@ class ParentsVC: BaseVC {
     
     /// 返回点击事件实现
     @objc func backAction() {
+        
         self.navigationController?.popViewController(animated: true)
+        self.dismiss(animated: true)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
